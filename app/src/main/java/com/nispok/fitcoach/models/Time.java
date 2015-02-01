@@ -6,8 +6,8 @@ public class Time implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private int hour = 19;
-    private int minute = 0;
+    private int hour = 21;
+    private int minute = 22;
 
     public int getHour() {
         return hour;

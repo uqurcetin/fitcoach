@@ -18,6 +18,8 @@ import android.widget.TextView;
 
 import com.nispok.fitcoach.R;
 import com.nispok.fitcoach.models.Goal;
+import com.nispok.fitcoach.receivers.AlarmReceiver;
+import com.nispok.fitcoach.services.GoalService;
 
 public class GoogleFitGoalSetupFragment extends Fragment {
 
@@ -80,7 +82,9 @@ public class GoogleFitGoalSetupFragment extends Fragment {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_save) {
-            goal.save();
+            GoalService.save(goal);
+            AlarmReceiver alarmReceiver = new AlarmReceiver();
+            alarmReceiver.setAlarms();
             listener.onGoalSetupFinished();
             return true;
         }

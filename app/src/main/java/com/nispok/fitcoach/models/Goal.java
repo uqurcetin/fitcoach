@@ -86,10 +86,4 @@ public class Goal implements Serializable {
         this.notifications = notifications;
     }
 
-    /**
-     * Saves this {@link com.nispok.fitcoach.models.Goal} in local persistence
-     */
-    public void save() {
-        //TODO: Implement me!
-    }
 }
